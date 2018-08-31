@@ -1,0 +1,63 @@
+doctype html
+html(lang="en")
+  head
+    title Freecodecamp Information Security and Quality Assurance Project: Metric-Imperial Converter
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="theme-color" content="#1e5180")
+    meta(name="msapplication-navbutton-color" content="#1e5180")
+    meta(name="apple-mobile-web-app-status-bar-style" content="#1e5180")
+    link(rel="stylesheet", href="/css/normalize.css")
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Ubuntu")
+  body
+    header
+      h1 Freecodecamp Information Security and Quality Assurance Project: Metric-Imperial Converter
+    .page-content
+      h2 User stories:
+      ol.user-stories
+        li I will help prevent the client from trying to guess(sniff) the MIME type.
+        li I will prevent cross-site scripting (XSS) attacks.
+        li I can *GET* /api/convert with a singler parameter containing an accepted number and unit and have it converted.
+        li Hint: Split the input by looking for the index of the first character.
+        li I can convert 'gal' to 'L' and vice versa. (1 gal to 3.78541 L)
+        li I can convert 'lbs' to 'kg' and vice versa. (1 lbs to 0.453592 kg)
+        li I can convert 'mi' to 'km' and vice versa. (1 mi to 1.60934 km)
+        li If my unit of measurement is invalid, returned will be 'invalid unit'.
+        li If my number is invalid, returned with will 'invalid number'.
+        li If both are invalid, return will be 'invalid number and unit'.
+        li I can use fractions, decimals or both in my parameter(ie. 5, 1/2, 2.5/6), but if nothing is provided it will default to 1.
+        li My return will consist of the initNum, initUnit, returnNum, returnUnit, and string spelling out units in format {initNum} {initial_Units} converts to {returnNum} {return_Units} with the result rounded to 5 decimals.
+        li All 16 unit tests are complete and passing.
+        li All 5 functional tests are complete and passing.
+      h2 Example usage:
+
+      h2 Example return:
+      //- form(method="post" action="/api/exercise/new-user" id="js-new-user-form" onsubmit="return newUserForm.validate()").standard-form
+      //-   label
+      //-     span Username #[span(title="Required").asterisk *]
+      //-     input(type="text" placeholder="name" name="name" autocomplete="off")
+      //-   button(type="submit") Create
+      //-   .error-container
+      //- h2 Add exercises
+      //- form(method="post" action="/api/exercise/add" id="js-new-exercise-form" onsubmit="return newExerciseForm.validate()").standard-form
+      //-   label
+      //-     span User id #[span(title="Required").asterisk *]
+      //-     input(type="text" placeholder="User ID" name="userId" autocomplete="off")
+      //-   label
+      //-     span Description #[span(title="Required").asterisk *]
+      //-     input(type="text" placeholder="Exercise description" name="description" autocomplete="off")
+      //-   label
+      //-     span Duration #[span(title="Required").asterisk *]
+      //-     input(type="text" placeholder="Minutes" name="duration" autocomplete="off")
+      //-   label
+      //-     span Date
+      //-     input(type="text" placeholder="YYYY-MM-DD" autocomplete="off" name="date")
+      //-   button(type="submit") Create
+      //-   .error-container
+      h2 Github
+      a(href="https://github.com/askov/metric-imperial-converter") https://github.com/askov/metric-imperial-converter
+    footer
+      | by #[a(href="https://www.freecodecamp.org/aleks-askov") Alex Askov]
+    script(src="/js/script.js")
