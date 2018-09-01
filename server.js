@@ -6,7 +6,8 @@ dbsetup.connect();
 const express = require('express'),
   app = express(),
   config = require('./config'),
-  bodyParser = require('body-parser');
+  bodyParser = require('body-parser'),
+  helmet = require('helmet');
 
 app.set('views', './views');
 app.set('view engine', 'pug');
@@ -17,6 +18,13 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
+
+// Sets "X-Content-Type-Options: nosniff".
+app.use(helmet.noSniff());
+// Sets "X-XSS-Protection: 1; mode=block".
+app.use(helmet.xssFilter());
+
+app.use(helmet.hidePoweredBy());
 
 app.use(require('./controllers'));
 
