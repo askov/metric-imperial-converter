@@ -1,7 +1,7 @@
 'use strict';
 
-const dbsetup = require('./db');
-dbsetup.connect();
+// const dbsetup = require('./db');
+// dbsetup.connect();
 
 const express = require('express'),
   app = express(),
